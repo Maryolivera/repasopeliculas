@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="formulario">
+        <h2>peliculas</h2>
+        <form onsubmit="return validar()">
+
+            <label for="pelicula">Pelicula:</label>
+            <input type="text" id="pelicula" name="pelicula"><br> 
+
+            <label for="puntuacion">Puntuacion:</label>
+            <input type="int" id="puntuacion" name="puntuacion"><br>
+
+            <label for="comentario">Comentario:</label>
+            <input type="text" id="comentario" name="comentario"><br>
+        
+        
+        
+        
+        </form>
+    </div>
+
+
+
+
+<script>
+    function validar(){
+        let sinError=true;
+        let pelicula=document.getElementById("pelicula");
+        let puntuacion=document.getElementById("puntuacion");
+        let comentario=document.getElementById("comentario");
+        let listaErrores=document.getElementById("listaErrores");
+        let listaDatos=document.getElementById("listaDatos");
+
+
+        listaErrores.inner.HTML="";
+        pelicula.classList.remove("error");
+        puntuacion.classList.remove("error");
+        comentario.classList.remove("error");
+
+
+
+    }
+</script>
+</body>
+</html>
